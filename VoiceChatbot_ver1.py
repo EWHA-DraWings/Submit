@@ -1,3 +1,6 @@
+# Open AI의 Playground에서의 여러 시도를 통해 완성한 프롬프트와 STT & TTS를 연결하여 음성 챗봇을 테스트해본 코드입니다.
+# 아직 백엔드 서버가 구축되지 않아 streamlit을 이용하였습니다.(시연 영상용)
+
 import os
 import streamlit as st
 import io
