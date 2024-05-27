@@ -27,3 +27,14 @@
 - node.js(BE)
 
 
+### VoiceChatbot_ver1.py의 requirement
+- streamlit==1.34.0
+- sounddevice==0.4.6
+- numpy==1.26.2
+- pydub==0.25.1
+- SpeechRecognition==3.10.4
+- google-cloud-speech==2.26.0
+- google-cloud-texttospeech==2.16.3
+- openai==1.30.1
+- python-dotenv==1.0.1
+
