@@ -18,12 +18,15 @@
 
 ✔️ 기능2: 챗봇과 나눈 대화를 바탕으로 일기 및 Report 생성
 
+✔️ 기능3: Report에는 감정 분석 결과, 질병 가능성, 자녀에게 전하고 싶은 말, 컨디션이 포함되어 제공
 
-### 사용 기술 및 프레임워크
+
+### 사용 기술 및 프레임워크💻
 - gpt-4o: https://openai.com/index/hello-gpt-4o/
 - Google cloud Text-to-Speech: https://cloud.google.com/text-to-speech?hl=ko
 - Google cloud Speech-to-Text: https://cloud.google.com/speech-to-text?hl=ko
 - Flutter(FE)
 - node.js(BE)
+-  koBERT : https://github.com/SKTBrain/KoBERT
 
 
