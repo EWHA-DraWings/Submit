@@ -1,4 +1,5 @@
 # Open AI의 Playground에서의 여러 시도를 통해 완성한 프롬프트와 STT & TTS를 연결하여 음성 챗봇을 테스트해본 코드입니다.
+# 아래의 코드를 실행하기 위해서는 Open AI API key와 Google API Key를 발급 받아야 합니다.
 # 아직 백엔드 서버가 구축되지 않아 streamlit을 이용하였습니다.(시연 영상용)
 
 import os
@@ -46,26 +47,35 @@ def play_audio(audio_data):
 # 음성 입력을 위한 함수
 def get_audio_input():
     r = sr.Recognizer()
+    r.pause_threshold = 3  # 사용자가 말을 멈췄을 때, 3초는 기다려주기
+    
     with sr.Microphone() as source:
         st.write("말씀하세요...")
-        audio = r.listen(source)
+        try:
+            # listen() 함수의 timeout과 phrase_time_limit 설정
+            audio = r.listen(source, timeout=10, phrase_time_limit=30)
+        except sr.WaitTimeoutError:
+            st.write("시간이 초과되었습니다. 다시 시도해주세요.")
+            return None
+
     try:
         # Google Speech-to-Text API 사용
         client = speech.SpeechClient()
         audio_data = audio.get_wav_data()
-        audio = speech.RecognitionAudio(content=audio_data)
+        recognition_audio = speech.RecognitionAudio(content=audio_data)
         config = speech.RecognitionConfig(
             encoding=speech.RecognitionConfig.AudioEncoding.LINEAR16,
             sample_rate_hertz=44100,  # 샘플링 속도를 44100 Hz로 설정
             language_code="ko-KR"
         )
-        response = client.recognize(config=config, audio=audio)
+        request = {"config": config, "audio": recognition_audio}
+        response = client.recognize(request=request)
         user_input = response.results[0].alternatives[0].transcript
         return user_input
     except Exception as e:
         st.write(f"음성을 인식할 수 없습니다: {e}")
         return None
-
+    
 # 챗봇 응답을 얻는 함수
 def get_chatbot_response(messages):
     try:
@@ -143,7 +153,8 @@ def main():
                     "4. Questions that ask the things the user wants to say to his or her child\n"
                     "5. questions that can check the user's memory precision about 'the things that I want to remember' which the user said yesterday\n"
                     "</Necessary questions you must ask>\n"
-                    "<Output> You should complete a diary in Korean by summarizing the user's answers to the question you asked.</Output>"
+                    "<Output> You should complete a diary in Korean by summarizing the user's answers to the question you asked, "
+                    "Make two other sections- one for the answers to the questions that ask the things the user wants to say to his or her child separately from the diary, and the other for the summary of the user's health conditions.</Output>"
                 )}
             ]
             for speaker, text in st.session_state.conversation:
