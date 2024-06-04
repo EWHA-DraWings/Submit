@@ -30,3 +30,20 @@
 -  koBERT : https://github.com/SKTBrain/KoBERT
 
 
+### VoiceChatbot_ver1.py의 requirement
+- streamlit==1.34.0
+- sounddevice==0.4.6
+- numpy==1.26.2
+- pydub==0.25.1
+- SpeechRecognition==3.10.4
+- google-cloud-speech==2.26.0
+- google-cloud-texttospeech==2.16.3
+- openai==1.30.1
+- python-dotenv==1.0.1
+
+### 감정분석모델
+- https://github.com/SKTBrain/KoBERT에서 불러온 모델이므로, 코드 실행 시 각 라이브러리 버전 확인 필요
+- 사용 데이터: 감성 대화 말뭉치(https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=realm&dataSetSn=86) & 감정 분류를 위한 대화 음성 데이터(https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&dataSetSn=263)
+- import gluonnlp as nlp 오류 발생 시, numpy 버전 낮춰주기
+- Test에서 사용한 함수는 일기를 입력했을 때, '중립'을 제외한 나머지 6가지 감정 중 높은 비율을 가진 상위 3개의 감정만 출력되도록 함.
+
