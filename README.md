@@ -47,3 +47,15 @@
 - import gluonnlp as nlp 오류 발생 시, numpy 버전 낮춰주기
 - Test에서 사용한 함수는 일기를 입력했을 때, '중립'을 제외한 나머지 6가지 감정 중 높은 비율을 가진 상위 3개의 감정만 출력되도록 함.
 
+### Wire Frame
+| 홈화면 | 회원가입 | 로그인 |
+|------------|------------|------------|
+| <img src="https://github.com/EWHA-DraWings/Submit/assets/118182432/925fb933-7901-4703-a6fb-6e8151aa8456" width="200px"> | <img src="https://github.com/EWHA-DraWings/Submit/assets/118182432/84461c84-bc99-433c-92b1-3d3e8acddbbd" width="200px"> | <img src="https://github.com/EWHA-DraWings/Submit/assets/118182432/5bf5f1fa-14f5-4569-888f-b08a6d9b3abd" width="200px"> |
+
+| 로딩 화면 | 채팅 | 일기 |
+|------------|------------|------------|
+| <img src="https://github.com/EWHA-DraWings/Submit/assets/118182432/a2af6409-71e0-485d-ab50-508917a23fe6" width="200px"> | <img src="https://github.com/EWHA-DraWings/Submit/assets/118182432/253e7e04-e6b4-479c-98f2-e15e55195916" width="200px"> | <img src="https://github.com/EWHA-DraWings/Submit/assets/118182432/a188539a-97e3-4984-a7c8-6ca6ab71ebcb" width="200px"> |
+
+| Report1 | Report2 | 시작 화면 |
+|------------|------------|------------|
+| <img src="https://github.com/EWHA-DraWings/Submit/assets/118182432/427b6315-ceee-4945-8935-50b7ac8c76a0" width="200px"> | <img src="https://github.com/EWHA-DraWings/Submit/assets/118182432/0bf72a62-d726-4ab1-bc60-d3ae9b602f9a" width="200px"> | <img src="https://github.com/EWHA-DraWings/Submit/assets/118182432/291c1097-8822-470e-bec2-d10c4298078f" width="200px"> |
