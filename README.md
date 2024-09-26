@@ -39,6 +39,7 @@
 ![image](https://github.com/user-attachments/assets/040638f8-0479-4595-9aad-38cc014b6a94)
 
 <br><br>
+##############수정################
 ### 사용 기술 및 프레임워크💻
 - gpt-4o: https://openai.com/index/hello-gpt-4o/
 - Google cloud Text-to-Speech: https://cloud.google.com/text-to-speech?hl=ko
@@ -58,6 +59,7 @@
 - google-cloud-texttospeech==2.16.3
 - openai==1.30.1
 - python-dotenv==1.0.1
+##############수정################
 
 ### 감정분석모델
 - https://github.com/SKTBrain/KoBERT에서 불러온 모델이므로, 코드 실행 시 각 라이브러리 버전 확인 필요
@@ -65,15 +67,15 @@
 - import gluonnlp as nlp 오류 발생 시, numpy 버전 낮춰주기
 - Test에서 사용한 함수는 일기를 입력했을 때, '중립'을 제외한 나머지 6가지 감정 중 높은 비율을 가진 상위 3개의 감정만 출력되도록 함.
 
-### Wire Frame
-| 홈화면 | 회원가입 | 로그인 |
-|------------|------------|------------|
-| <img src="https://github.com/EWHA-DraWings/Submit/assets/118182432/925fb933-7901-4703-a6fb-6e8151aa8456" width="200px"> | <img src="https://github.com/EWHA-DraWings/Submit/assets/118182432/84461c84-bc99-433c-92b1-3d3e8acddbbd" width="200px"> | <img src="https://github.com/EWHA-DraWings/Submit/assets/118182432/5bf5f1fa-14f5-4569-888f-b08a6d9b3abd" width="200px"> |
+<br><br>
+### UX/UI
+✔️ 로그인, 회원가입
 
-| 로딩 화면 | 채팅 | 일기 |
-|------------|------------|------------|
-| <img src="https://github.com/EWHA-DraWings/Submit/assets/118182432/a2af6409-71e0-485d-ab50-508917a23fe6" width="200px"> | <img src="https://github.com/EWHA-DraWings/Submit/assets/118182432/253e7e04-e6b4-479c-98f2-e15e55195916" width="200px"> | <img src="https://github.com/EWHA-DraWings/Submit/assets/118182432/a188539a-97e3-4984-a7c8-6ca6ab71ebcb" width="200px"> |
+![image](https://github.com/user-attachments/assets/bea6f822-968b-41b3-aee7-f0e1f0a0c168)
+<br>
 
-| Report1 | Report2 | 시작 화면 |
-|------------|------------|------------|
-| <img src="https://github.com/EWHA-DraWings/Submit/assets/118182432/427b6315-ceee-4945-8935-50b7ac8c76a0" width="200px"> | <img src="https://github.com/EWHA-DraWings/Submit/assets/118182432/0bf72a62-d726-4ab1-bc60-d3ae9b602f9a" width="200px"> | <img src="https://github.com/EWHA-DraWings/Submit/assets/118182432/291c1097-8822-470e-bec2-d10c4298078f" width="200px"> |
+✔️ 주요 화면
+
+![Component 2](https://github.com/user-attachments/assets/258c6947-25c0-4041-aa3a-5ca29b9b48e6)
+<br>
+
