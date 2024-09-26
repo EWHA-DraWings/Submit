@@ -59,23 +59,29 @@
 - google-cloud-texttospeech==2.16.3
 - openai==1.30.1
 - python-dotenv==1.0.1
-##############수정################
+
 
 ### 감정분석모델
 - https://github.com/SKTBrain/KoBERT에서 불러온 모델이므로, 코드 실행 시 각 라이브러리 버전 확인 필요
 - 사용 데이터: 감성 대화 말뭉치(https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=realm&dataSetSn=86) & 감정 분류를 위한 대화 음성 데이터(https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&dataSetSn=263)
 - import gluonnlp as nlp 오류 발생 시, numpy 버전 낮춰주기
 - Test에서 사용한 함수는 일기를 입력했을 때, '중립'을 제외한 나머지 6가지 감정 중 높은 비율을 가진 상위 3개의 감정만 출력되도록 함.
+- 
+##############수정################
 
 <br><br>
 ### UX/UI
 ✔️ 로그인, 회원가입
 
 ![image](https://github.com/user-attachments/assets/bea6f822-968b-41b3-aee7-f0e1f0a0c168)
-<br>
+<br><br>
 
 ✔️ 주요 화면
 
 ![Component 2](https://github.com/user-attachments/assets/258c6947-25c0-4041-aa3a-5ca29b9b48e6)
-<br>
+<br><br>
 
+✔️ User Flow
+
+![user flow (1)](https://github.com/user-attachments/assets/bedd1c74-3b32-42ac-8313-cb3225d9ec9f)
+<br><br>
